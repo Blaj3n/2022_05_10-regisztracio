@@ -56,7 +56,16 @@
 			$sorokSzama = $eredmeny->num_rows;
 			//php tömb átkonvertálása
 			$fAdat = mysqli_fetch_array($eredmeny);
-			// ha a sorok száma 1, akkor van ilyen
+			//ha a sorok száma 1, akkor van ilyen
+			if ($sorokSzama == 1){
+				$_SESSION['login'] = true;
+				$_SESSION['felhAzon'] = $fAdat['felhAzon'];
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 			
 		}
 
