@@ -23,12 +23,16 @@
 			/* titkosítás */
 			$jelszo = md5($jelszo);
 			/* lekérdezés szövege, létezik-e ilyen nevű vagy e-mail című felhasználó? */
-			$sql = "SELECT * FROM felhasználó where nev='$nev' OR email='$email'";
+			$sql = "SELECT * FROM felhasználók where nev='$nev' OR email='$email'";
 			//lekérdezés végrehajtása, eredménye egy php tömb
 			$letezik = $this->kapcsolat->query($sql);
 			//sorok száma lekérdezése
 			$sorokSzama = $letezik->num_rows;
 			//ha 0 az eredmény, akkor ilyen még nincs, felvesszük
+			if($sorokSzama == 0){
+				$sql1 = "INSERT INTO felhasználók SET jogAzon = 2, nev = '$nev', jelszo = '$jelszo', email='$email', vezetekNev = '$vNev',
+				keresztNev = '$kNev', szulDatum = '$szulDatum'";
+			}
 			
 		}
 
