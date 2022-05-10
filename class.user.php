@@ -53,6 +53,7 @@
 			//sql lekérdezés végrehajtása, eredménye php tömb
 			$eredmeny = mysqli_query($this->kapcsolat, $sql2);
 			//sorok száma lekérdezése
+			$sorokSzama = $eredmeny->num_rows;
 			//php tömb átkonvertálása
 			// ha a sorok száma 1, akkor van ilyen
 			
