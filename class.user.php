@@ -14,6 +14,7 @@
 				echo "Hibás csatlakozás.";
 				exit();
 			}
+			else echo "Sikeres kapcsolódás.";
 		}
 
 		/* regisztráció*/
