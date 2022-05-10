@@ -21,6 +21,7 @@
 		/* azonosító automatikus, jogAzon default 2 lesz, csak a többit adja meg a felhasználó */
 		public function reg_felhasznalo($vNev, $kNev, $nev, $szulDatum, $jelszo, $email){
 			/* titkosítás */
+			$jelszo = md5($jelszo);
 			/* lekérdezés szövege, létezik-e ilyen nevű vagy e-mail című felhasználó? */
 			//lekérdezés végrehajtása
 			//sorok száma lekérdezése
