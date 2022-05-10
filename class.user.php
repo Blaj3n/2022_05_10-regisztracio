@@ -85,6 +85,8 @@
 		}
 		/* kijelentkezés */
 		public function kijelentkezes() {
-		
+			$_SESSION['login'] = false;
+			session_destroy();
+		}
 	}
 ?>
