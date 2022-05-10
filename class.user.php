@@ -37,6 +37,11 @@
 				szulDatum = '$szulDatum'";
 				//logikai típussal tér vissza
 				$eredmeny = mysqli_query($this->kapcsolat, $sql) or die(mysqli_connect_errno()."Nem illeszthető be az adat.");
+				return $eredmeny;
+			}
+			else
+			{
+				return false;
 			}
 		}
 
