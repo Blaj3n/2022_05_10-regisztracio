@@ -49,6 +49,7 @@
 		public function bejelentkezes($emailVagyNev, $jelszo){
 			//titkosítás
 			//lekérdezés arra, hogy van-e ilyen név vagy email a táblában
+			$sql2 = "SELECT felhAzon FROM felhasználók where nev='$emailVagyNev' OR email='$emailVagyNev' and jelszo='$jelszo'";
 			//sql lekérdezés végrehajtása, eredménye php tömb
 			$eredmeny = mysqli_query($this->kapcsolat, $sql2);
 			//sorok száma lekérdezése
