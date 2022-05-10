@@ -30,10 +30,14 @@
 			$sorokSzama = $letezik->num_rows;
 			//ha 0 az eredmény, akkor ilyen még nincs, felvesszük
 			if($sorokSzama == 0){
-				$sql1 = "INSERT INTO felhasználók SET jogAzon = 2, nev = '$nev', jelszo = '$jelszo', email='$email', vezetekNev = '$vNev',
-				keresztNev = '$kNev', szulDatum = '$szulDatum'";
+				$sql1 = "INSERT INTO felhasználók SET
+				jogAzon = 2, nev = '$nev',
+				jelszo = '$jelszo', email='$email',
+				vezetekNev = '$vNev',keresztNev = '$kNev',
+				szulDatum = '$szulDatum'";
+				//logikai típussal tér vissza
+				$eredmeny = mysqli_query($this->kapcsolat, $sql) or die(mysqli_connect_errno()."Nem illeszthető be az adat.");
 			}
-			
 		}
 
 		/* bejelentkezés */
