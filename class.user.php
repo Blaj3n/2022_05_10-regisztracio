@@ -31,7 +31,7 @@
 			//ha 0 az eredmény, akkor ilyen még nincs, felvesszük
 			if($sorokSzama == 0){
 				$sql1 = "INSERT INTO felhasználók SET
-				jogAzon = 2, nev = '$nev',
+				jogosultsag = 2, nev = '$nev',
 				jelszo = '$jelszo', email='$email',
 				vezetekNev = '$vNev',keresztNev = '$kNev',
 				szulDatum = '$szulDatum'";
