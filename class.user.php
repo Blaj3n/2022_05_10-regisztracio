@@ -81,7 +81,7 @@
 
 		/* session kezdődik*/
 		public function get_session(){
-			
+			return $_SESSION['login'];
 		}
 		/* kijelentkezés */
 		public function kijelentkezes() {
