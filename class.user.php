@@ -23,6 +23,7 @@
 			/* titkosítás */
 			$jelszo = md5($jelszo);
 			/* lekérdezés szövege, létezik-e ilyen nevű vagy e-mail című felhasználó? */
+			$sql = "SELECT * FROM felhasználó where nev='$nev' OR email='$email'";
 			//lekérdezés végrehajtása
 			//sorok száma lekérdezése
 			//ha 0 az eredmény, akkor ilyen még nincs, felvesszük
