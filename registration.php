@@ -43,12 +43,18 @@ if (isset($_REQUEST['submit'])) {
     <div id="container">
         <h1>Regisztráció</h1>
         <form action="" method="post" name="reg">
+            <label>Vezetéknév:</label>
+            <input type="text" name="vNev" required="" /><br><br> <!-- name="adatbázis adattag"-->
+            <label>Keresztnév:</label>
+            <input type="text" name="kNev" required="" /><br><br>
             <label>Felhasználói név:</label>
             <input type="text" name="nev" required="" /><br><br>
-            <label>Email:</label>
-            <input type="text" name="email" required="" /><br><br>
-            <label>Password:</label>
+            <label>Születési dátum:</label>
+            <input type="date" name="szulDatum" required="" /><br><br>
+            <label>Jelszó:</label>
             <input type="password" name="jelszo" required="" /><br><br>
+            <label>Email cím:</label>
+            <input type="email" name="email" required="" /><br><br>
             <input type="submit" name="submit" value="Regisztráció" /><br><br>
             <a href="login.php">Belépéshez kattints ide</a>
         </form>
