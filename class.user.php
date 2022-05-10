@@ -72,8 +72,10 @@
 		/* név megmutatása*/
 		public function get_nev($felhAzon){
 			//azonosító alapján név lekérdezése
+			$sql3 = "SELECT nev FROM felhasználók WHERE felhAzon = '$felhAzon'";
 			$eredmeny = mysqli_query($this->kapcsolat, $sql3);
 			//php tömb átalakítása
+			$fAdat = mysqli_fetch_array($eredmeny);
 			echo $fAdat['nev'];
 		}
 
