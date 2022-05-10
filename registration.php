@@ -5,7 +5,14 @@ $felh = new User(); // Checking for user logged in or not
 
 if (isset($_REQUEST['submit'])) {
     extract($_REQUEST);
-    $register = $felh->reg_felhasznalo($nev, $email, $jelszo);
+    $register = $felh->reg_felhasznalo(
+        $vNev,
+        $kNev,
+        $nev,
+        $szulDatum,
+        $jelszo,
+        $email
+    );
     if ($register) {
         // sikeres regisztráció
         echo 'Sikeres regisztráció <a href="login.php">Kattints ide!</a> a belépéshez';
