@@ -55,6 +55,7 @@
 			//sorok száma lekérdezése
 			$sorokSzama = $eredmeny->num_rows;
 			//php tömb átkonvertálása
+			$fAdat = mysqli_fetch_array($eredmeny);
 			// ha a sorok száma 1, akkor van ilyen
 			
 		}
